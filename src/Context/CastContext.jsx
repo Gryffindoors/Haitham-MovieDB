@@ -9,7 +9,7 @@ export function CastProvider({ children, movieId }) {
   useEffect(() => {
     if (!movieId) return; // Don't fetch if there's no ID
 
-    AxiosInstance.get(`movie/${movieId}/credits?language=en-US`)
+    AxiosInstance.get(`${category}/${movieId}/credits?language=en-US`)
       .then((resp) => setCastList(resp.data.cast))
       .catch((error) => console.error("Error fetching cast:", error));
   }, [movieId]); // Runs when `movieId` changes

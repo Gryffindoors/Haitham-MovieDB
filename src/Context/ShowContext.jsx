@@ -6,14 +6,14 @@ import AxiosInstance from "../Components/API/AxiosInstance";
 export const ShowDetailsContext = createContext(null);
 
 export function ShowDetailsProvider({ children }) {
-  const { id, category } = useParams(); 
+  const { id, category } = useParams();
   const [show, setShow] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (!id || !category) return;
 
-    AxiosInstance.get(`movie/${id}?language=en-US`) 
+    AxiosInstance.get(`${category}/${id}?language=en-US`)
       .then((resp) => {
         setShow(resp.data);
         setLoading(false);

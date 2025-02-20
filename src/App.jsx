@@ -22,7 +22,7 @@ export default function App() {
               <Route path="/cast" element={<Cast />} />
               <Route path="/movies" element={<Movies />} />
               <Route path="/TV" element={<TV />} />
-              <Route path="/movie/:id" element={<SingleShow />} />
+              <Route path="/:category/:id" element={<SingleShow />} />
               <Route path="*" element={<Error />} /> {/* Handles unknown URLs */}
             </Routes>
           </Suspense>
