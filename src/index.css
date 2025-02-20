@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+.active{
+  background-color: var(--color-gray-900);
+  --tw-font-weight: var(--font-weight-bold) /* 700 */;
+    font-weight: var(--font-weight-bold);
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Works for Firefox */
+.hide-scrollbar {
+  scrollbar-width: none;
+}
