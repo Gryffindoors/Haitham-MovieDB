@@ -7,12 +7,13 @@ export function CastProvider({ children, movieId, category }) {
   const [castList, setCastList] = useState([]);
 
   useEffect(() => {
-    if (!movieId) return; // Don't fetch if there's no ID
+    if (!movieId || !category) return; // ✅ Prevents calling API if category is missing
 
     AxiosInstance.get(`${category}/${movieId}/credits?language=en-US`)
       .then((resp) => setCastList(resp.data.cast))
       .catch((error) => console.error("Error fetching cast:", error));
-  }, [movieId, category]); // Runs when `movieId` changes
+  }, [movieId, category]); // ✅ Added category dependency
+
 
   return (
     <CastContext.Provider value={{ castList }}>

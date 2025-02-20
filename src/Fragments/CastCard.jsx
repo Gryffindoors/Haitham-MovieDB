@@ -20,7 +20,7 @@ export default function CastCard({object}) {
       alt={name} 
       className="w-full h-auto rounded-lg" 
     />
-    <div className="flex flex-col gap-2 p-2">
+    <div className="flex flex-col gap-1 p-2">
       <h3 className="font-bold text-[18px]">{name}</h3>
       <p className="text-gray-400 text-xs font-bold">as {character || "Unknown"}</p>
     </div>

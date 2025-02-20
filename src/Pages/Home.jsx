@@ -29,7 +29,7 @@ export default function Home() {
         <Navbar />
 
         <section className="py-16 px-8">
-          <h1 className="text-5xl font-bold text-start">Haitham Movie Database</h1>
+          <h1 className="text-5xl font-bold text-start mt-7">Haitham Movie Database</h1>
           <p className="text-lg text-start mt-4">
             Ignite your imagination from the comfort of your home
           </p>

@@ -12,7 +12,7 @@ const navigation = [
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-gray-800 text-white shadow-lg border-b border-gray-700 sticky">
+    <Disclosure as="nav" className="bg-gray-800 text-white shadow-lg border-b border-gray-700 fixed z-10 w-full">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
