@@ -5,8 +5,8 @@ import AxiosInstance from "../Components/API/AxiosInstance";
 
 export const ShowDetailsContext = createContext(null);
 
-export function ShowDetailsProvider({ children }) {
-  const { id, category } = useParams();
+export function ShowDetailsProvider({ children, id, category  }) {
+  // const { id, category } = useParams();
   const [show, setShow] = useState(null);
   const [loading, setLoading] = useState(true);
 

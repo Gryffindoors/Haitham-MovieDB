@@ -3,7 +3,7 @@ import AxiosInstance from "../Components/API/AxiosInstance";
 
 export const CastContext = createContext([]);
 
-export function CastProvider({ children, movieId }) {
+export function CastProvider({ children, movieId, category }) {
   const [castList, setCastList] = useState([]);
 
   useEffect(() => {
@@ -12,7 +12,7 @@ export function CastProvider({ children, movieId }) {
     AxiosInstance.get(`${category}/${movieId}/credits?language=en-US`)
       .then((resp) => setCastList(resp.data.cast))
       .catch((error) => console.error("Error fetching cast:", error));
-  }, [movieId]); // Runs when `movieId` changes
+  }, [movieId, category]); // Runs when `movieId` changes
 
   return (
     <CastContext.Provider value={{ castList }}>

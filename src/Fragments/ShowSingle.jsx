@@ -3,6 +3,7 @@ import { bg } from '../Pages/Home'
 import CastCard from './CastCard';
 import { CastContext, CastProvider } from '../Context/CastContext';
 import { useParams } from 'react-router';
+import { ShowDetailsContext } from '../Context/ShowContext';
 
 
 export default function ShowSingle() {
@@ -12,8 +13,6 @@ export default function ShowSingle() {
 
 
     return <>
-        <CastProvider movieId={id} category={category}>
-
             <div className="bg-gray-100/50 text-gray-900 min-h-screen relative">
                 <img src={bg} className="fixed -z-10 opacity-0 md:opacity-20" alt="Background" />
                 <img src="/images/InterstellarWide.jpg" alt="" className='absolute w-full max-h-1/2 -z-5 opacity-0 md:opacity-20' />
@@ -29,7 +28,5 @@ export default function ShowSingle() {
 
                 </section>
             </div>
-        </CastProvider>
-
     </>
 }
